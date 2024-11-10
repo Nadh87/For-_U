@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+}
+
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circular-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Increased button size */
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glow 1s infinite alternate;
+    color: white;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Added bold font weight */
+}
+
+.male-button {
+    background-color: rgb(70, 93, 185);
+    animation: male-move 5s infinite linear;
+}
+
+.female-button {
+    background-color: rgb(248, 3, 244);
+    animation: female-move 5s infinite linear;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes male-move {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(50px) translateY(50px);
+    }
+    50% {
+        transform: translateX(0) translateY(100px);
+    }
+    75% {
+        transform: translateX(-50px) translateY(50px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes female-move {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(-50px) translateY(-50px);
+    }
+    50% {
+        transform: translateX(-100px) translateY(0);
+    }
+    75% {
+        transform: translateX(-50px) translateY(-50px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}

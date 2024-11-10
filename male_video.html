@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Male Video</title>
+</head>
+<body>
+    <div class="video-container">
+        <video controls src="./assets/male_videos/video1.mp4"></video>
+    </div>
+    <script>
+        const maleVideos = [
+            "./assets/male_videos/video1.mp4",
+            "./assets/male_videos/video2.mp4",
+            // Add more male video URLs here
+        ];
+
+        const randomIndex = Math.floor(Math.random() * maleVideos.length);
+        const videoUrl = maleVideos[randomIndex];
+
+        const videoElement = document.querySelector('video');
+        videoElement.src = videoUrl;
+    </script>
+</body>
+</html>

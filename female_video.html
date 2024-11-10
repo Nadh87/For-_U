@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Female Video</title>
+</head>
+<body>
+    <div class="video-container">
+        <video controls src="./assets/female_videos/video1.mp4"></video>
+    </div>
+    <script>
+        const femaleVideos = [
+            "./assets/female_videos/video1.mp4",
+            "./assets/female_videos/video2.mp4",
+            "./assets/female_videos/video3.mp4",
+            "./assets/female_videos/video4.mp4",
+            "./assets/female_videos/video5.mp4",
+            "./assets/female_videos/video6.mp4",
+            "./assets/female_videos/video7.mp4",
+            "./assets/female_videos/video8.mp4",
+            "./assets/female_videos/video9.mp4",
+            "./assets/female_videos/video10.mp4",
+            "./assets/female_videos/video11.mp4",
+            "./assets/female_videos/video12.mp4",
+            "./assets/female_videos/video13.mp4",
+            // Add more female video URLs here
+        ];
+
+        const randomIndex = Math.floor(Math.random() * femaleVideos.length);
+        const videoUrl = femaleVideos[randomIndex];
+
+        const videoElement = document.querySelector('video');
+        videoElement.src = videoUrl;
+    </script>
+</body>
+</html>
