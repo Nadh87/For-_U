@@ -15,11 +15,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px; /* Increased button size */
-    height: 120px;
+    width: 200px; /* Increased button size */
+    height: 200px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    animation: glow 1s infinite alternate;
+    animation: glow 2s infinite alternate;
     color: white;
     font-size: 24px; /* Increased font size */
     font-weight: bold; /* Added bold font weight */
@@ -37,45 +37,52 @@ body {
 
 @keyframes glow {
     0% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes male-move {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    25% {
-        transform: translateX(50px) translateY(50px);
+      opacity: 0.5;
+      transform: scale(1);
     }
     50% {
-        transform: translateX(0) translateY(100px);
-    }
-    75% {
-        transform: translateX(-50px) translateY(50px);
+      opacity: 1;
+      transform: scale(1.1);
     }
     100% {
-        transform: translateX(0) translateY(0);
+      opacity: 0.5;
+      transform: scale(1);
     }
-}
-
-@keyframes female-move {
+  }
+  
+  @keyframes male-move {
     0% {
-        transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0) rotate(0deg);
     }
     25% {
-        transform: translateX(-50px) translateY(-50px);
+      transform: translateX(50px) translateY(50px) rotate(10deg);
     }
     50% {
-        transform: translateX(-100px) translateY(0);
+      transform: translateX(0) translateY(100px) rotate(-10deg);
     }
     75% {
-        transform: translateX(-50px) translateY(-50px);
+      transform: translateX(-50px) translateY(50px) rotate(10deg);
     }
     100% {
-        transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0) rotate(0deg);
     }
-}
+  }
+  
+  @keyframes female-move {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-50px) translateY(-50px) rotate(-10deg);
+    }
+    50% {
+      transform: translateX(-100px) translateY(0) rotate(10deg);
+    }
+    75% {
+      transform: translateX(-50px) translateY(-50px) rotate(-10deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }
+
